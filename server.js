@@ -16,7 +16,7 @@ client.project(project_id).stories.all(function(error, stories) {
 var data = require('./data.txt')
 
 var convertToMillis = function(time) {
-    var format = "%Y-%m-%dT%H:%M:%SZ";
+    var format = d3.time.format("%Y-%m-%dT%H:%M:%SZ");
     return new Date(format.parse(time)).getTime();
 }
 var getLastFriday = function() {
